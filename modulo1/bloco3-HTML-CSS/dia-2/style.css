@@ -1,0 +1,55 @@
+h1 {
+    color: orange;
+    font-size: 65px;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+ul {
+    background-color: orangered;
+    line-height: 50px;
+    font-family: fantasy;
+}
+
+.list {
+    background-color: palegreen;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+    font-style: italic;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+body {
+    font-size: 16px;
+}
+
+#amarelo {
+    background-color: yellow;
+
+}
+
+#verde {
+    background-color: greenyellow;
+
+}
+
+#vermelho {
+    background-color: rgb(241, 43, 43);
+}
+
+#azul {
+    background-color: blue;
+}
+
+#roxo {
+    background-color: purple;
+}
+
+#laranja {
+    background-color: orange;
+}
