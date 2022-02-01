@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+article {
+    width: 80%;
+    border: 1px solid black;
+    
+    
+}
+nav {
+    border: 1px solid black;
+}
+header {
+    border: 1px solid black;
+}
+ aside {
+     border: 1px solid black;
+     width: 10%;
+     
+     
+     
+     
+ }
+
+
+
+
+
+
+td {
+    padding-right: 150px;
+    font-size: large;
+    
+}
+
+td.cinza {
+    background-color: rgb(201, 201, 201);
+}
+table {
+    border: 1px solid rgb(211, 211, 211);
+    display: inline-block;
+}
+td.negrito {
+    font-weight: bold;
+}
