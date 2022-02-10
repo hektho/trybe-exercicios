@@ -23,9 +23,9 @@ console.log(fruits.reverse())*/
 }
 console.log(verificaPalindrome('radar'))*/
 
-//2)
+//2) Criar uma função que retorne o índice de maior valor dentro de um array de números.
 
-let numeros = [28, 3, 18, 5, 19, 4];
+/*function indiceMaior(numeros) {
 let maiorNum = 0;
  for(let key in numeros){
      if(numeros[key] > maiorNum){
@@ -34,13 +34,38 @@ let maiorNum = 0;
  }
 let arrayNum = [];
 arrayNum.push(maiorNum);
- let indice = 0;
- for(let index = 0; index < 2; index+=1){
-    for(let index2 = 0; index2 < numeros.length; index2 += 1){
-        if(maiorNum[index] !== numeros[index2]){
-             indice = indice + 1
+
+ for(let index = 0; index < 1; index+=1) {
+    for(let index2 = 0; index2 < numeros.length; index2 += 1) {
+        if(arrayNum[index] === numeros[index2]) {
+            return 'O índice de maior valor é ' + index2;
         }
+        
     }
  }
+}
 
- console.log(indice)
+console.log(indiceMaior([1, 32, 48, 12, 69, 78]))*/
+
+// 3) Criar uma função que retorne o índice de menor valor.
+
+function indiceMenor(numeros) {
+    let menorNum = null;
+ for(let key in numeros){
+     if(numeros[key] < menorNum || menorNum === null){
+         menorNum = numeros[key]
+     }
+ }
+let arrayNum = [];
+arrayNum.push(menorNum);
+
+ for(let index = 0; index < 1; index+=1) {
+    for(let index2 = 0; index2 < numeros.length; index2 += 1) {
+        if(arrayNum[index] === numeros[index2]) {
+            return 'O índice de menor valor é ' + index2;
+        }
+        
+    }
+ }
+}
+console.log(indiceMenor([10, 8, 15, -2, 5]))
