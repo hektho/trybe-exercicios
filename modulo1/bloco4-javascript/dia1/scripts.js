@@ -64,7 +64,7 @@ se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
 
 //7)
 
-let nota = 250;
+/*let nota = 250;
 
 if(nota >= 90 && nota < 101){
     console.log("A")
@@ -80,6 +80,4 @@ if(nota >= 90 && nota < 101){
     console.log('F');
 } else if (nota < 0 || nota > 100){
     console.log('Error');
-}
-
-
+}*/
