@@ -49,7 +49,7 @@ console.log(indiceMaior([1, 32, 48, 12, 69, 78]))*/
 
 // 3) Criar uma função que retorne o índice de menor valor.
 
-function indiceMenor(numeros) {
+/*function indiceMenor(numeros) {
     let menorNum = null;
  for(let key in numeros){
      if(numeros[key] < menorNum || menorNum === null){
@@ -68,4 +68,18 @@ arrayNum.push(menorNum);
     }
  }
 }
-console.log(indiceMenor([10, 8, 15, -2, 5]))
+console.log(indiceMenor([10, 8, 15, -2, 5]))*/
+// 4) Crie uma função que identifique a maior palavra dentro de um array.
+
+
+function maiorNome(names) {
+    let maiorN = '';
+    for (let index = 0; index < names.length; index += 1) {
+        if (names[index].length > maiorN.length) {
+            maiorN = names[index]
+        }
+    }
+    return maiorN;
+}
+
+console.log(maiorNome(['Fernanda', 'Paulo André', 'José', 'Rihanna', 'Alberto']))
