@@ -2,6 +2,7 @@ let body = document.querySelector('body');
 let h1 = document.createElement('h1');
 body.appendChild(h1);
 h1.innerText = 'Exercício 5.2 - JavaScript'
+h1.className = 'title'
 
 
 
@@ -14,7 +15,7 @@ body.appendChild(main);
 let section = document.createElement('section');
 section.className = 'center-content';
 main.appendChild(section);
-
+main.style.backgroundColor = 'green'
 
 
 let p = document.createElement('p');
@@ -25,10 +26,12 @@ p.innerText = 'ESTOU NASCENDO!!!! DO PÓ';
 let section1 = document.createElement('section');
 section1.className = 'left-content';
 main.appendChild(section1);
+main.removeChild(section1);
 
 let section2 = document.createElement('section');
 section2.className = 'right-content';
 main.appendChild(section2);
+section2.style.marginRight = 'auto'
 
 let img = document.createElement('img');
 img.src = 'https://picsum.photos/200';
@@ -49,6 +52,11 @@ function createLi() {
         ul.appendChild(li).innerText = lista[index]
     }
 
+let listaNao = document.querySelector('ul');
+listaNao.removeChild(listaNao.lastChild)
+listaNao.removeChild(listaNao.lastChild)
+
+
 }
 createLi();
 //Criação de uma função que recebe dois parâmetros, um número e uma string.
@@ -59,10 +67,12 @@ function createSub(numero, nome) {
         let subtitulo = document.createElement('h3');
         // Ao mesmo tempo que o elemento é criado como filho da tag 'main', um texto é adicionado que é o segundo parâmetro.
         main.appendChild(subtitulo).innerText = nome;
+        subtitulo.className = 'description'
     }
 }
-
 createSub(3, 'Heitor');
+
+
 
 
 
