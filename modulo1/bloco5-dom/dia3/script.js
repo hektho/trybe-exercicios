@@ -106,3 +106,32 @@ function zoom() {
     }
 }
 zoom();
+let myTasks = document.querySelector('.my-tasks');
+function createTask(atividade) {
+    let span = document.createElement('span');
+    span.innerText = atividade;
+    myTasks.appendChild(span);
+}
+createTask('Cozinhar');
+
+function legendColor(cor) {
+    let div = document.createElement('div');
+    div.className = 'task';
+    div.style.backgroundColor = cor;
+    myTasks.appendChild(div);
+}
+legendColor('green');
+
+let divLegenda = document.querySelector('.task');
+
+divLegenda.addEventListener("click", funcao);
+
+function funcao() {
+    if (divLegenda.className.length > 4) {
+        divLegenda.className = 'task'
+    } else if (divLegenda.className.length === 4) {
+        divLegenda.className = 'task selected'
+    }
+    
+    
+}
