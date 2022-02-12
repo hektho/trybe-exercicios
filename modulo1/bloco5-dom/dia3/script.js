@@ -37,3 +37,72 @@ function createDaysOfTheWeek() {
       }
   }
   createDays()
+  
+  let buttonContainer = document.querySelector('.buttons-container');
+
+  function createButton(feriados) {
+    let button = document.createElement('button');
+    button.innerText = feriados;
+    button.id = 'btn-holiday';
+    buttonContainer.appendChild(button);
+    button.addEventListener("click", mudaCor);
+    function mudaCor() {
+        let background = 'rgb(238,238,238)';
+        let newColor = 'white'
+        let holiday = document.getElementsByClassName('holiday');
+        for (let i = 0; i < holiday.length; i += 1) {
+            if (holiday[i].style.backgroundColor === newColor) {
+                holiday[i].style.backgroundColor = background;
+            } else {
+                holiday[i].style.backgroundColor = newColor;
+            }
+        }
+    }
+}
+createButton("Feriados");
+
+function createSexta(sexta) {
+    let buttonSexta = document.createElement('button');
+    buttonSexta.id = 'btn-friday';
+    buttonSexta.innerText = sexta;
+    buttonContainer.appendChild(buttonSexta);
+    
+}
+
+createSexta("Sexta-Feira");
+let pegandoButao = document.querySelector('#btn-friday');
+pegandoButao.addEventListener("click", mudaText);
+function mudaText() {
+    let array = [4, 11, 18, 25];
+    let seixta = "Sexta!"
+    let classeSexta = document.getElementsByClassName('friday');
+    for (let index = 0; index < classeSexta.length; index += 1) {
+        let dia = classeSexta[index];
+        if (classeSexta[index].innerText != seixta) {
+            classeSexta[index].innerText= seixta
+        } else {
+            classeSexta[index].innerText = array[index]
+        }
+        
+    }
+}
+
+
+
+function zoom() {
+    let liDay = document.getElementsByClassName('day');
+
+    for (let index = 0; index < liDay.length; index += 1) {
+        liDay[index].addEventListener('mouseover', loucura);
+        function loucura() {
+            liDay[index].style.fontSize = '1.5em'
+            liDay[index].style.color = 'green'
+        }
+        liDay[index].addEventListener('mouseout', meuDeus);
+        function meuDeus() {
+            liDay[index].style.fontSize = '20px'
+            liDay[index].style.color = '#777'
+        }
+    }
+}
+zoom();
