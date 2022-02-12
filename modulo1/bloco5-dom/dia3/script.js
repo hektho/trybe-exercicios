@@ -37,3 +37,23 @@ function createDaysOfTheWeek() {
       }
   }
   createDays()
+  
+  let buttonContainer = document.querySelector('.buttons-container');
+
+  function createButton(feriados) {
+    let button = document.createElement('button');
+    button.innerText = 'Feriados'
+    button.id = 'btn-holiday'
+    buttonContainer.appendChild(button);
+    button.addEventListener("click", mudaCor);
+    function mudaCor() {
+        let holiday = document.getElementsByClassName('holiday');
+        for (let i = 0; i < holiday.length; i += 1) {
+            holiday[i].style.backgroundColor = '#2ec'
+            
+        }
+    }
+}
+
+createButton();
+
