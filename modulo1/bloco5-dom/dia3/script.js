@@ -94,14 +94,14 @@ function zoom() {
 
     for (let index = 0; index < liDay.length; index += 1) {
         liDay[index].addEventListener('mouseover', loucura);
-        function loucura() {
-            liDay[index].style.fontSize = '1.5em'
-            liDay[index].style.color = 'green'
+        function loucura(event) {
+            event.target.style.fontSize = '1.5em'
+            event.target.style.color = 'green'
         }
         liDay[index].addEventListener('mouseout', meuDeus);
-        function meuDeus() {
-            liDay[index].style.fontSize = '20px'
-            liDay[index].style.color = '#777'
+        function meuDeus(event) {
+            event.target.style.fontSize = '20px'
+            event.target.style.color = '#777'
         }
     }
 }
@@ -132,6 +132,22 @@ function funcao() {
     } else if (divLegenda.className.length === 4) {
         divLegenda.className = 'task selected'
     }
-    
+}
+
+let lis = document.getElementsByClassName('day');
+function pegaLi() {
+    let dive = document.querySelector('.task');
+    for (let index = 0; index < lis.length; index += 1) {
+        lis[index].addEventListener("click", mudaCorLi);
+        function mudaCorLi(event) {
+            if (dive.className.length > 4) {
+               event.target.className = 'fonte';
+               
+            }
+        }
+        mudaCorLi();
+        
+    }
     
 }
+pegaLi()
