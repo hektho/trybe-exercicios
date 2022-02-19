@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    font-size: 1.2em;
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(71, 71, 71);
+    background-color: rgb(241, 255, 241);
+}
+
+main {
+    border: 1px solid rgb(200, 230, 190);
+    width: 80%;
+    margin: auto;
+    background-color: rgb(224, 255, 224);
+    padding: 50px;
+}
+
+#textArea {
+    width: 80%;
+    resize: none;
+}
+
+section {
+    margin-top: 20px;
+}
+
+.input {
+    padding: 10px;
+    font-size: 14px;
+}
+
+section #porque {
+    text-decoration: underline;
+}
+
+section button {
+    padding: 10px;
+}
