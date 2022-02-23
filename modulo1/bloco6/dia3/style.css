@@ -1,0 +1,81 @@
+body {
+    margin: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(236, 236, 236);
+}
+
+.header-container {
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-container .trybe-tech {
+    color: white;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+.header-container .link a {
+    color: rgb(224, 224, 224);
+}
+
+ img {
+    width:  75px;
+    height: 75px;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem {
+    height: 150px;
+    width: 150px;
+}
+
+.content {
+    background-color: rgb(221, 221, 221);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px rgb(58, 58, 58);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content p {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#container-img {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+#container-footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    width: 200px;
+    margin-top: 30px;
+
+}
+
+#container-footer img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+}
