@@ -130,12 +130,12 @@ h1, h2 {
   footer {
     display: flex;
     background-color: rgb(255, 246, 249);
-    
     padding: 20px;
     flex-direction: column;
     align-items: center;
     box-shadow: 5px 10px 20px rgb(37, 37, 37);
     margin-top: 100px;
+    text-align: center;
   }
 
   .darkModeBody {
@@ -155,4 +155,79 @@ h1, h2 {
     border: 1px solid white;
 
   }
+@media screen and (min-width:768px) {
+  .header-container i {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 768px) {
+
+  .header-container button  {
+    display: none;
+  }
+
+  .header-container ul {
+    display: none;
+  }
+
+  .header-container nav {
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+    border: 1px solid red;
+  }
+
+  .header-container nav i {
+   margin-right: 20px;
+  }
+
+  .header-container p {
+    border: 1px solid blue;
+    width: 80%;
+  }
+
+  .aside-one ul {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .aside-one ul div {
+    align-items: center;
+    max-width: 300px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+.main-content p{
+    font-size: 14px;
+  }
+
+  .main-content h1 {
+    font-size: 22px;
+  }
+
+  .header-container p {
+    font-size: 26px;
+  }
+  
+  .aside-one h2 {
+    font-size: 24px;
+  }
+  .aside-one ul li {
+    font-size: 14px;
+  }
+
+  .aside-two ul li {
+    font-size: 14px;
+  }
+
+  .aside-two h2 {
+    font-size: 24px;
+  }
+}
