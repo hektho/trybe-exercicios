@@ -72,7 +72,7 @@ console.log(indiceMenor([10, 8, 15, -2, 5]))*/
 // 4) Crie uma função que identifique a maior palavra dentro de um array.
 
 
-function maiorNome(names) {
+/*function maiorNome(names) {
     let maiorN = '';
     for (let index = 0; index < names.length; index += 1) {
         if (names[index].length > maiorN.length) {
@@ -82,4 +82,40 @@ function maiorNome(names) {
     return maiorN;
 }
 
-console.log(maiorNome(['Fernanda', 'Paulo André', 'José', 'Rihanna', 'Alberto']))
+console.log(maiorNome(['Fernanda', 'Paulo André', 'José', 'Rihanna', 'Alberto']));*/
+
+//5) Crie uma função que receba um array de ineiros e retorne o inteiro que mais se repete
+
+/*function repeteNum(numeros) {
+    let maiorNumRepet = 0;
+    let numRepet = 0;
+    let indiceMaiorNum = 0;
+    for (let index = 0; index < numeros.length; index += 1) {
+        if (numRepet > maiorNumRepet) {
+            maiorNumRepet = numRepet;
+            indiceMaiorNum = numeros[index - 1];
+        }
+        numRepet = 0;
+        for (let index2 = 0; index2 < numeros.length; index2 += 1) {
+            if (numeros[index] === numeros[index2]) {
+                numRepet += 1;
+            }
+            
+        }
+    }
+    return indiceMaiorNum;
+}
+console.log(repeteNum([1, 4, 8, 5, 5, 4, 9, 2]))*/
+
+// 6) Crie uma função que receba um número natural N e retorne o somatório de todos os números de 1 até N
+
+/*function somaTudo(N) {
+    let soma = 0;
+    for (let index = 0; index <= N; index += 1) {
+        soma += index;
+    }
+    return soma;
+}
+
+console.log(somaTudo(10));*/
+
