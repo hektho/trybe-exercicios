@@ -22,10 +22,18 @@
         throw new Error ('É necessário adicionar dois valores!');
       }
     }
+    const verifyNumber = () => {
+      const value1 = document.getElementById('value1').value;
+      const value2 = document.getElementById('value2').value;
+      if (isNaN(value1) === true && isNaN(value2) === true) {
+        throw new Error('Os valores precisam ser númericos!')
+      }
+    }
     
     function sum() {
       try {
-        verifyInputs()
+        verifyInputs();
+        verifyNumber();
         const value1 = document.getElementById('value1').value;
         const value2 = document.getElementById('value2').value;
         const result = parseInt(value1) + parseInt(value2);
@@ -33,7 +41,8 @@
         
       }
       catch (error) {
-        alert(`Erro: ${error.message}`);
+        const result = document.getElementById('result');
+        result.innerText = error.message;
 
       } finally {
         document.getElementById('value1').value = '';
@@ -41,12 +50,13 @@
       }
     }
     
-
+    
     
     window.onload = () => {
       const button = document.getElementById('button');
       button.addEventListener('click', sum);
     }
+    
   </script>
 </body>
 </html>
