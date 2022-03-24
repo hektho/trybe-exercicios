@@ -92,3 +92,27 @@ sendMarsTemperature(temperatureInFahrenheit, handleError);
 
 // imprime "Hi there! Curiosity here. Right now is 53ºC at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
 sendMarsTemperature(greet, handleError);*/
+
+
+/*function tripleTheChances(array) {
+  return array.map((item) => item * 3)
+}*/
+
+
+function tripleTheChances(array) {
+  const chances = [];
+  for (let key in array) {
+    chances.push(array[key] * 3);
+  }
+  return chances;
+}
+
+
+
+function tripleTheChances(array) {
+  const chances = [];
+  array.forEach((item) => chances.push(item * 3));
+  return chances;
+}
+
+console.log(tripleTheChances([1,5,8,10,15,20,35]));
