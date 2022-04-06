@@ -1,0 +1,6 @@
+.header {
+    display: flex;
+    background-color: rgb(255, 255, 134);
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
