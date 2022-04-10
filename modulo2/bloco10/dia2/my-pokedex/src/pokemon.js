@@ -12,7 +12,11 @@ class PokemonComponent extends Component {
                         <p>{`Type: ${poke.type}`}</p>
                         <p>{`Average weight: ${poke.averageWeight.value}${poke.averageWeight.measurementUnit}`}</p>
                     </div>
-                    <img src={poke.image} alt={`Imagem do pokemon ${poke.name}.`} className='pokemon-image'/>
+                    <div className='container-img'>
+                        <p>{`ID: ${poke.id}`}</p>
+                        <img src={poke.image} alt={`Imagem do pokemon ${poke.name}.`} className='pokemon-image'/>
+                    </div>
+                    
                 </section>
         );
     }

@@ -19,9 +19,45 @@ body {
     text-align: center;
     align-items: center;
     flex: 1 1 0;
+    box-shadow: 2px 2px 5px black;
 }
 
 .container-pikomon {
   display: flex;
   flex-wrap: wrap;
+}
+
+.container-img {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  font-weight: 600;
+}
+
+button {
+  padding: 10px;
+  width: 20%;
+  align-self: center;
+  background-color: rgb(255, 255, 134);
+  border: 1px solid rgb(0, 47, 255);
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+button:hover {
+  border-bottom: 3px solid rgb(0, 47, 255);
+}
+.div-select {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  margin: 0px 20px;
+  text-align: center;
+}
+.container-main {
+  display: flex;
+  flex-direction: column;
 }
