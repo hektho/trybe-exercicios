@@ -61,3 +61,32 @@ input {
   display: flex;
   flex-direction: column;
 }
+
+h3 {
+  margin-left: 10px;
+  color: rgb(255, 0, 0);
+}
+
+.show-all {
+  display: flex;
+  justify-content: center;
+}
+
+.show-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.label-checkbox {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.label-filtrar select{
+  padding: 10px;
+  margin-left: 10px;
+}
+
+
