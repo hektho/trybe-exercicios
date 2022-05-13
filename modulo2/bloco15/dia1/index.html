@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #container {
+        color: rgb(78, 78, 78);
+        font-size: 20px;
+        font-weight: 900;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: blanchedalmond;
+        border-radius: 10px;
+        width: max-content;
+        padding: 20px;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p>Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+      <button id="random">Random Color</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js" integrity="sha512-1/8Tj23BRrWnKZXeBruk6wTnsMJbi/lJsk9bsRgVwb6j5q39n0A00gFjbCTaDo5l5XrPVv4DZXftrJExhRF/Ug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      const btnNextColor = document.querySelector('#next');
+      const btnPrevColor = document.querySelector('#previous');
+      const colorParagraph = document.querySelector('#value');
+      const randomColor = document.querySelector('#random');
+      const body = document.querySelector('body');
+      const container = document.querySelector('#container');
+
+      const ESTADO_INICIAL = {
+        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+        index: 0,
+      };
+
+      const nextColor = () => {
+        return {
+          type: "NEXT_COLOR",
+        };
+      }
+
+      const previousColor = () => {
+        return {
+          type: "PREVIOUS_COLOR",
+        };
+      }
+
+      const randomCor = () => {
+        return {
+          type: "RANDOM_COLOR"
+        };
+      }
+
+      const reducer = (state = ESTADO_INICIAL, action) => {
+        const { index, colors } = state;
+        switch(action.type) {
+          case "NEXT_COLOR":
+            return {
+              ...state,
+              index: index === colors.length - 1 ? 0: index + 1,
+            };
+          case "PREVIOUS_COLOR":
+            return {
+              ...state,
+              index: index < 1 ? colors.length - 1 : index - 1,
+            }
+          case "RANDOM_COLOR":
+            return {
+              ...state,
+              colors: [...colors, randomColorFunction()],
+              index: colors.length
+            }
+            default:
+            return state;
+        };
+      }
+      const store = Redux.createStore(reducer);
+
+      btnNextColor.addEventListener('click', () => {
+        store.dispatch(nextColor());
+      });
+
+      btnPrevColor.addEventListener('click', () => {
+        store.dispatch(previousColor());
+      });
+      
+      randomColor.addEventListener('click', () => {
+        store.dispatch(randomCor());
+      });
+
+      const randomColorFunction = () => {
+        const color = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
+        return color;
+      };
+
+      store.subscribe(() => {
+        const { colors, index } = store.getState();
+        colorParagraph.innerHTML = colors[index];
+        body.style.backgroundColor = colors[index];
+        console.log(colors);
+      });
+      
+    </script>
+  </body>
+</html>
